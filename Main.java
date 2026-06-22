@@ -7,6 +7,9 @@ public class Main {
                 "Sucursal Norte",
                 15000);
 
+        envio1.setCostoEnvio(-5000);
+
         envio1.mostrarInformacion();
     }
 }
+
