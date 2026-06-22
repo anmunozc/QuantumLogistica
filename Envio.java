@@ -5,13 +5,20 @@ public class Envio {
     private String destino;
     private double costoEnvio;
 
-    //Constructor
+    // Constructor por defecto
+    public Envio() {
+        this.idEnvio = "SIN_ID";
+        this.destino = "SIN_DESTINO";
+        this.costoEnvio = 0;
+    }
+    
+    // Constructor parametrizado
     public Envio(String idEnvio, String destino, double costoEnvio) {
         this.idEnvio = idEnvio;
         this.destino = destino;
         this.costoEnvio = costoEnvio;
     }
-    
+
     //Getters pára idEnvio
     public String getIdEnvio() {
         return idEnvio;
