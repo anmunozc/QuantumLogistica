@@ -1,11 +1,14 @@
+//declaracion del paquete donde se encuentra la clase Main
+package app;
+//Importacion Formal de las clases
+import modelo.Envio;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        // Constructor por defecto
+       //Inicializacion de las instancias para el entorno logistico
         Envio envio1 = new Envio();
-
-        // Constructor parametrizado
         Envio envio2 = new Envio("ENV001", "Sucursal Norte", 15000);
 
         System.out.println("== Envío creado con constructor por defecto ==");
