@@ -1,22 +1,27 @@
-//declaracion del paquete donde se encuentra la clase Main
 package app;
-//Importacion Formal de las clases
+
+import modelo.Cliente;
 import modelo.Envio;
+import modelo.Producto;
 
 public class Main {
 
     public static void main(String[] args) {
 
-       //Inicializacion de las instancias para el entorno logistico
-        Envio envio1 = new Envio();
-        Envio envio2 = new Envio("ENV001", "Sucursal Norte", 15000);
+        Cliente cliente1 =
+                new Cliente("CLI001", "Bilbo Baggins");
 
-        System.out.println("== Envío creado con constructor por defecto ==");
+        Producto producto1 =
+                new Producto("PROD001", "Tabaco Old Toby", 4.5);
+
+        Envio envio1 =
+                new Envio(
+                        "ENV001",
+                        "Sucursal Norte",
+                        15000,
+                        cliente1,
+                        producto1);
+
         envio1.mostrarInformacion();
-
-        System.out.println();
-
-        System.out.println("== Envío creado con constructor parametrizado ===");
-        envio2.mostrarInformacion();
     }
 }
