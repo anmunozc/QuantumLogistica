@@ -57,14 +57,16 @@ public class Envio {
         return costoEnvio;
     }
 
+    //Validaciones
     public void setCostoEnvio(double costoEnvio) {
 
-        if (costoEnvio >= 0) {
-            this.costoEnvio = costoEnvio;
-        } else {
-            System.out.println("Error: El costo del envío no puede ser negativo.");
-        }
+    if (costoEnvio < 0) {
+        throw new IllegalArgumentException(
+                "El costo del envío no puede ser negativo.");
     }
+
+    this.costoEnvio = costoEnvio;
+}
 
     // Getter y setter para cliente
     public Cliente getCliente() {
